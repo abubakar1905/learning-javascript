@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //with statement tidak di rekomendasikan untuk di gunakan karena bikin ambigu
+    const person = {
+        firstName: 'eko',
+        middleName: 'kurniawan',
+        lastName: 'khanedy'
+    };
+
+    console.info(person.firstName);
+    cosole.info(person.middleName);
+    console.info(person.lastName);
+
+    with(person){
+    console.info(firstName);
+    cosole.info(middleName);
+    console.info(lastName);
+    }
+</script>
+</body>
+</html>

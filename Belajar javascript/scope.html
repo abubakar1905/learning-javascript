@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //ini global scope.
+    let counter = 0; 
+    function hitMe(){
+        //local scope hitMe
+        counter++;
+        
+    
+    }
+    function other(){
+        //local scope other
+    }
+    hitMe();
+    hitMe();
+    hitMe();
+    console.info(counter);
+
+    function first(){
+        let firstVariable = 'first';
+        console.log(firstVariable);
+
+        function firstNested(){
+            console.log(firstVariable);
+            const firstNestedVariable = 'firstNested';
+            console.log(firstNestedVariable); //ini baru BISA
+        }
+        firstNested();
+        // console.log(firstNestedVariable); ini bakal ERROR karena di aksesnya di luar local scopenya
+
+    }
+    function second(){
+        secondVariable = 'second';
+        console.log(secondVariable);
+    }
+    first();
+    second();
+    // console.log(firstVariable); //local scope ga bisa di akses di luar functionnya
+    // console.log(secondVariable); //input= ERROR
+    
+    
+</script>
+</body>
+</html>
